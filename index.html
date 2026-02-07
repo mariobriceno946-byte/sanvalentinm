@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para mi chaparrita</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: rgba(255, 214, 231, 0.95);
+  border-radius: 20px;
+  padding: 25px;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+h2 {
+  margin-top: 0;
+  color: #b3005e;
+}
+
+p {
+  color: #6b0035;
+  font-size: 1.2em;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 8px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.yes {
+  background: #ff4d88;
+  color: white;
+}
+
+.no {
+  background: white;
+  color: #ff4d88;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #b3005e;
+  font-weight: bold;
+}
+
+.firma {
+  margin-top: 25px;
+  font-size: 0.85em;
+  text-align: right;
+  color: #7a003d;
+}
+</style>
+</head>
+
+<body>
+
+<img class="bg" src="fondo.webp" alt="fondo">
+
+<div class="container">
+  <div class="card">
+    <h2>Para ti, mi chaparrita…</h2>
+    <p>¿Quieres ser mi San Valentín?</p>
+
+    <button class="yes" onclick="decirSi()">Sí quiero 💗</button>
+    <button class="no" onclick="decirNo()">No quiero</button>
+
+    <div id="respuesta" class="result"></div>
+
+    <div class="firma">–De tu Amor Mario💗</div>
+  </div>
+</div>
+
+<script>
+function decirSi() {
+  document.getElementById("respuesta").innerText =
+    "Sabía que dirías que sí 💕";
+}
+
+function decirNo() {
+  document.getElementById("respuesta").innerText =
+    "No podías decir que no, así que SÍ 🥴🥺";
+}
+</script>
+
+</body>
+</html>
